@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import './Main.css';
+
 import FlagCard from '../FlagCard/FlagCard';
-import { getFlags } from '../../services/flags';
+import { getCountries } from '../../services/countries';
 
 export default function Main() {
   const [flags, setFlags] = useState([]);
