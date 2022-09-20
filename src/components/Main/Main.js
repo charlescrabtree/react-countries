@@ -4,6 +4,8 @@ import FlagCard from '../FlagCard/FlagCard';
 
 export default function Main() {
   return (
-    <div>Main</div>
+    <main>
+      Hey
+    </main>
   );
 }
