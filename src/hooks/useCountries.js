@@ -4,11 +4,15 @@ import { useState, useEffect } from 'react';
 export default function useCountries() {
   const [countries, setCountries] = useState([]);
   const [continent, setContinent] = useState('all');
-
+  const [error, setError] = useState('');
   useEffect(() => {
     async function fetchData() {
-      const data = await getCountries();
-      setCountries(data);
+      try {
+        const data = await getCountries();
+        setCountries(data);
+      } catch (e) {
+        setError("Oh no, Something went very very wrong here. Bad programmer! Jk, you are precious. Let's fix it =^. ^=");
+      }
     }
     fetchData();
     
