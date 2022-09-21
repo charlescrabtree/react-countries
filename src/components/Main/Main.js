@@ -1,14 +1,16 @@
 
 import FlagCard from '../FlagCard/FlagCard';
-import { getCountries } from '../../services/countries';
+import useCountries from '../../hooks/useCountries';
+import Filter from '../Filter/Filter';
 
 export default function Main() {
-  const countries = getCountries();
+  const { filterCountries, setContinent, continent } = useCountries();
   return (
     <main>
       <h2>Heh, check it</h2>
+      <Filter setContinent={setContinent} continent={continent} />
       <div>
-        {countries.map((country) => (
+        {filterCountries().map((country) => (
           <FlagCard key={country.id} {...country} />
         ))}
       </div>
