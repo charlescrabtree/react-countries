@@ -1,0 +1,25 @@
+.flag-display {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .options {
+    margin: 20px;
+  }
+  
+  input,
+  select {
+    font-family: 'Cinzel', serif;
+    padding: 5px;
+    border-radius: 15px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+  
+  label {
+    color: black;
+    font-weight: bold;
+    text-shadow: 5px 5px 5px white;
+  }
