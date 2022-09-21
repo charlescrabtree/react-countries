@@ -22,5 +22,5 @@ export default function useCountries() {
     if (continent === 'all') return countries;
     return countries.filter((country) => country.continent === continent);
   };
-  return { filterCountries, continent, setContinent };
+  return { filterCountries, continent, setContinent, error };
 }
